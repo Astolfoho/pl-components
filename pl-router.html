@@ -10,13 +10,14 @@
     Polymer({
       is: 'pl-router',
       properties:{
-          containerId:String
+          containerId:String,
+          defaultUrl:String
       },
       ready:function(){
           this.$.ajax.addEventListener("response",this.navigateAjaxResponse.bind(this));
           window.onhashchange = this.navigate.bind(this);
-          if(!window.location.hash)
-                window.location.hash = "!/search/search-page";
+          if(!window.location.hash && this.defaultUrl)
+                window.location.navigate(this.defaultUrl);
             else{
                 this.navigate();
             }
