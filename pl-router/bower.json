@@ -1,0 +1,22 @@
+{
+  "name": "pl-router",
+  "homepage": "https://github.com/Astolfoho/pl-components",
+  "authors": [
+    "astolfo <astolfo-hoscher@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version":"0.0.1",
+  "dependencies": {
+    "polymer": "^1.7.0",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.4.3"
+  }
+}
