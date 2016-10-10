@@ -49,6 +49,7 @@
 
     _handleTap: function(ev){
       if (!this.get('expanded') && !ev.target.closest('.button')){
+        this.fire('expand');        
         this.toggle();
       }
     },
