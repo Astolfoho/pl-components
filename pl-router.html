@@ -11,7 +11,8 @@
       is: 'pl-router',
       properties:{
           containerId:String,
-          defaultUrl:String
+          defaultUrl:String,
+          rootFolder:String
       },
       ready:function(){
           this.$.ajax.addEventListener("response",this.navigateAjaxResponse.bind(this));
@@ -25,7 +26,7 @@
 
       navigate:function(ev){
          var url = window.location.hashPage;
-         this.$.ajax.url = `./pages${url}.html`;
+         this.$.ajax.url = `${this.rootFolder}/${url}.html`;
          this.$.ajax.generateRequest();
       },
 
