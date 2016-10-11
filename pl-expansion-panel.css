@@ -39,9 +39,9 @@ paper-material:hover {
   padding: 24px 24px 0px 24px;
   margin: 24px 0;
 }
-:host[expanded] iron-icon {
+/*:host[expanded] iron-icon {
   opacity: 0;
-}
+}*/
 :host[expanded] .expansion-panel-content {
   opacity: 1;
 }

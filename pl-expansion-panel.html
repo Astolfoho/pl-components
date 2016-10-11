@@ -11,7 +11,7 @@
       <header>
         <span class="expansion-panel-title">{{panelTitle}}<span class="expansion-panel-meta">{{panelMeta}}</span></span>
         <span class="expansion-panel-value">{{panelValue}}</span>
-        <iron-icon icon="expand-more" title="Expand / collapse card contents"></iron-icon>
+        <iron-icon icon="{{icon}}" title="Expand / collapse card contents"></iron-icon>
       </header>
       <div class="expansion-panel-content" id="wrapper">
         <div class="expansion-panel-overflow" id="content">
@@ -44,6 +44,8 @@
       this.set('expanded', expanded);
       this.$.wrapper.style.height =
         this.get('expanded') ? contentHeight : '0px';
+        this.icon = this.get('expanded') ? "expand-less" : "expand-more"
+
     },
 
     _handleTap: function(ev){
@@ -62,6 +64,9 @@
       });
       Polymer.updateStyles();
     },
+    ready:function(){
+      this.icon = this.get('expanded') ? "expand-less" : "expand-more"
+    }
   });
 
 </script>
