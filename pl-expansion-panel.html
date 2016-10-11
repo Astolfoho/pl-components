@@ -1,4 +1,3 @@
-
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-material/paper-material.html">
 <link rel="import" href="../paper-button/paper-button.html">
@@ -48,10 +47,11 @@
     },
 
     _handleTap: function(ev){
-      if (!this.get('expanded') && !ev.target.closest('.button')){
+      if (!this.get('expanded')){
         this.fire('expand');        
-        this.toggle();
       }
+        this.toggle();
+      
     },
 
     attached: function(){
@@ -65,4 +65,3 @@
   });
 
 </script>
-
