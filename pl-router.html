@@ -26,7 +26,7 @@
 
       navigate:function(ev){
          var url = window.location.hashPage;
-         this.$.ajax.url = `${this.rootFolder}/${url}.html`;
+         this.$.ajax.url = `${this.rootFolder}${url}.html`;
          this.$.ajax.generateRequest();
       },
 
